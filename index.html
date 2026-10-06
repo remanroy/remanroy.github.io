@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080b12">
+<meta name="description" content="Reman Roy Tripura — Engineer, Security Researcher and Pentester. Application security, penetration testing and vulnerability research.">
+<title>Reman Roy Tripura — Security Researcher & Pentester</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080b12;--bg2:#0d121c;--panel:rgba(17,24,38,.72);--line:rgba(255,255,255,.09);
+  --text:#edf2f7;--muted:#94a3b8;--green:#6ee7b7;--cyan:#67e8f9;--blue:#93c5fd;
+  --shadow:0 24px 80px rgba(0,0,0,.38);--max:1120px
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:
+ radial-gradient(900px 500px at 90% -10%,rgba(103,232,249,.12),transparent 60%),
+ radial-gradient(800px 500px at -10% 20%,rgba(110,231,183,.09),transparent 60%),
+ var(--bg);color:var(--text);font:16px/1.7 Inter,system-ui,sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,#000,transparent 75%)}
+a{color:inherit}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+.nav{position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line);background:rgba(8,11,18,.76);backdrop-filter:blur(18px)}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:800;text-decoration:none;letter-spacing:-.03em}.brand span{color:var(--green)}
+.nav-links{display:flex;gap:22px;align-items:center}.nav-links a{text-decoration:none;color:var(--muted);font-size:.9rem}.nav-links a:hover{color:var(--text)}
+.menu{display:none;background:none;border:1px solid var(--line);color:var(--text);padding:8px 10px;border-radius:10px}
+.hero{min-height:calc(100vh - 72px);display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:80px;padding:82px 0 90px}
+.eyebrow{font:500 .82rem "JetBrains Mono",monospace;color:var(--green);letter-spacing:.12em;text-transform:uppercase}
+h1,h2,h3{line-height:1.1;letter-spacing:-.04em;margin:0}
+h1{font-size:clamp(3.2rem,7vw,6.6rem);max-width:850px;margin-top:18px}
+.gradient{background:linear-gradient(110deg,var(--text),var(--blue) 45%,var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-role{font:600 1.08rem "JetBrains Mono",monospace;color:#cbd5e1;margin-top:22px;min-height:32px}
+.cursor{display:inline-block;width:8px;height:1.05em;background:var(--green);vertical-align:-.16em;margin-left:5px;animation:blink 1s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+.hero-copy{max-width:690px;color:var(--muted);font-size:1.08rem;margin:24px 0 0}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:12px;border:1px solid var(--line);background:#111827;text-decoration:none;font-weight:600;transition:.25s}
+.btn:hover{transform:translateY(-2px);border-color:rgba(110,231,183,.45)}
+.btn.primary{background:var(--green);color:#052018;border-color:transparent}
+.status{display:flex;gap:9px;align-items:center;margin-top:25px;color:var(--muted);font-size:.9rem}.dot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 16px var(--green);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.45;box-shadow:0 0 5px var(--green)}}
+.profile-card{position:relative;justify-self:end;width:min(390px,100%);padding:12px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025));border-radius:28px;box-shadow:var(--shadow);transform:rotate(2deg);animation:float 5s ease-in-out infinite}
+.profile-card img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:20px;filter:saturate(.92)}
+.profile-glow{position:absolute;inset:-25px;background:radial-gradient(circle,rgba(110,231,183,.17),transparent 65%);z-index:-1;filter:blur(20px)}
+@keyframes float{50%{transform:translateY(-10px) rotate(-1deg)}}
+.section{padding:100px 0;border-top:1px solid var(--line)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:34px}
+.section-kicker{font:500 .75rem "JetBrains Mono",monospace;color:var(--green);text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px}
+h2{font-size:clamp(2rem,4vw,3.2rem)}.section-intro{color:var(--muted);max-width:600px;margin:0}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.card{grid-column:span 4;padding:25px;border:1px solid var(--line);background:var(--panel);border-radius:20px;box-shadow:0 10px 35px rgba(0,0,0,.12);transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:rgba(103,232,249,.2)}.card.large{grid-column:span 7}.card.side{grid-column:span 5}
+.card h3{font-size:1.15rem;margin-bottom:9px}.card p{color:var(--muted);margin:0}
+.meta{font:500 .78rem "JetBrains Mono",monospace;color:var(--green);margin-bottom:12px}
+.tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}.tag{font:500 .78rem "JetBrains Mono",monospace;color:#cbd5e1;border:1px solid var(--line);padding:6px 9px;border-radius:8px;background:rgba(255,255,255,.025)}
+.timeline{position:relative;margin-left:8px}.timeline:before{content:"";position:absolute;left:8px;top:7px;bottom:7px;width:1px;background:var(--line)}
+.item{position:relative;padding-left:38px;margin-bottom:30px}.item:before{content:"";position:absolute;left:3px;top:8px;width:11px;height:11px;border:2px solid var(--green);border-radius:50%;background:var(--bg)}
+.item h3{font-size:1.1rem}.item .date{font:500 .76rem "JetBrains Mono",monospace;color:var(--green);margin:7px 0}.item p{margin:0;color:var(--muted)}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.skillbox{padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}.skillbox h3{font-size:1rem;margin-bottom:16px}
+.project{display:flex;flex-direction:column;min-height:230px}.project .project-foot{margin-top:auto;padding-top:22px;color:var(--green);font:500 .78rem "JetBrains Mono",monospace}
+.contact{display:grid;grid-template-columns:1fr .8fr;gap:30px;align-items:stretch}.contact-box{padding:30px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(110,231,183,.08),rgba(255,255,255,.025));border-radius:22px}.contact-links{display:grid;gap:10px;margin-top:22px}.contact-links a{text-decoration:none;color:#dbeafe}.contact-links a:hover{color:var(--green)}
+footer{padding:35px 0 55px;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;gap:20px}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:850px){.hero{grid-template-columns:1fr;gap:45px;padding-top:60px}.profile-card{justify-self:center;width:min(330px,100%)}.grid .card,.card.large,.card.side{grid-column:span 12}.skills{grid-template-columns:1fr 1fr}.nav-links{display:none}.menu{display:block}}
+@media(max-width:560px){.container{width:min(var(--max),calc(100% - 28px))}.hero{padding:45px 0 70px}h1{font-size:3.2rem}.skills{grid-template-columns:1fr}.section{padding:75px 0}.section-head{display:block}.section-intro{margin-top:12px}footer{display:block}footer span{display:block;margin-top:8px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.profile-card,.cursor,.dot{animation:none}.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top">reman<span>.security</span></a>
+    <button class="menu" aria-label="Open navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+<section class="hero container">
+  <div>
+    <div class="eyebrow">Application Security · Vulnerability Research</div>
+    <h1>Reman Roy<br><span class="gradient">Tripura</span></h1>
+    <div class="hero-role"><span id="typed">Engineer</span><span class="cursor"></span></div>
+    <p class="hero-copy">Security researcher and pentester focused on practical application security, vulnerability discovery and clear, actionable reporting.</p>
+    <div class="actions">
+      <a class="btn primary" href="#contact">Let's work together →</a>
+      <a class="btn" href="Reman_Roy_Tripura_CV.pdf" download>Download CV</a>
+      <a class="btn" href="https://github.com/remanroy" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+    <div class="status"><span class="dot"></span> Open to security opportunities & collaboration</div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-glow"></div>
+    <img src="profile.jpg" alt="Portrait of Reman Roy Tripura">
+  </div>
+</section>
+
+<section id="about" class="section">
+<div class="container reveal">
+  <div class="section-head"><div><div class="section-kicker">01 / About</div><h2>Security with an engineering mindset.</h2></div>
+  <p class="section-intro">I combine hands-on security testing with an engineering background to understand systems, reproduce issues and communicate risk clearly.</p></div>
+  <div class="grid">
+    <article class="card large"><div class="meta">PROFILE</div><p>My background is in Mechanical Engineering, and I moved into cybersecurity through ethical hacking training, practical labs, CTFs and security research. I care about evidence-driven findings: impact, reproduction steps and practical remediation.</p></article>
+    <article class="card side"><div class="meta">LOCATION</div><h3>Bangladesh</h3><p>Available for remote security work, research and collaboration.</p></article>
+  </div>
+</div>
+</section>
+
+<section id="experience" class="section">
+<div class="container reveal">
+  <div class="section-head"><div><div class="section-kicker">02 / Experience</div><h2>Experience</h2></div><p class="section-intro">Security work, independent research and technical practice.</p></div>
+  <div class="timeline">
+    <div class="item"><h3>Jr. Mobile Application Security Analyst (Intern)</h3><div class="date">OCT 2026 — PRESENT · BYTE CAPSULE · REMOTE</div><p>Android and iOS application security assessments.</p></div>
+    <div class="item"><h3>Independent Bug Bounty Hunter</h3><div class="date">HACKERONE · BUGCROWD</div><p>Testing applications in public and private programs, with Android as the main focus. Reported a debug configuration vulnerability in 2024, triaged as P5.</p></div>
+    <div class="item"><h3>CTF Player</h3><div class="date">FEB 2026 — JUN 2026 · HACK THE BOX</div><p>Hands-on security challenges and practical problem solving.</p></div>
+    <div class="item"><h3>CTF Player</h3><div class="date">AUG 2024 — JUN 2025 · TRYHACKME</div><p>Practical cybersecurity learning through guided labs and challenges.</p></div>
+    <div class="item"><h3>Computer Operator · Freelance</h3><div class="date">SEP 2024 — FEB 2025 · TTC, RANGAMATI</div><p>Technical and computer operation support.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="skills" class="section">
+<div class="container reveal">
+  <div class="section-head"><div><div class="section-kicker">03 / Toolkit</div><h2>Skills & tools</h2></div><p class="section-intro">A practical toolkit for application, web and network security work.</p></div>
+  <div class="skills">
+    <div class="skillbox"><h3>Application Security</h3><div class="tags"><span class="tag">Burp Suite</span><span class="tag">Frida</span><span class="tag">Objection</span><span class="tag">JADX</span><span class="tag">APKTool</span><span class="tag">Ghidra</span><span class="tag">MobSF</span><span class="tag">OWASP MASTG</span><span class="tag">OWASP MASVS</span></div></div>
+    <div class="skillbox"><h3>Web & Network</h3><div class="tags"><span class="tag">OWASP Top 10</span><span class="tag">Nmap</span><span class="tag">Wireshark</span><span class="tag">Nessus</span><span class="tag">Metasploit</span><span class="tag">sqlmap</span><span class="tag">Nikto</span><span class="tag">Hydra</span></div></div>
+    <div class="skillbox"><h3>Systems & Engineering</h3><div class="tags"><span class="tag">Kali Linux</span><span class="tag">Windows</span><span class="tag">Docker</span><span class="tag">QEMU/KVM</span><span class="tag">SolidWorks</span><span class="tag">Photoshop</span><span class="tag">Illustrator</span><span class="tag">Excel</span></div></div>
+  </div>
+</div>
+</section>
+
+<section id="projects" class="section">
+<div class="container reveal">
+  <div class="section-head"><div><div class="section-kicker">04 / Projects</div><h2>Selected projects</h2></div><p class="section-intro">Engineering projects that demonstrate design, analysis and problem solving.</p></div>
+  <div class="grid">
+    <article class="card project large"><div><div class="meta">THESIS · 2023</div><h3>Colored & Metallic Product Sorting Conveyor</h3><p>Built a conveyor system that sorts colored, metallic and non-metallic objects by analysing sensor output frequency, aiming to reduce manual sorting labour.</p></div><div class="project-foot">Mechanical Engineering · Automation</div></article>
+    <article class="card project side"><div><div class="meta">SOLIDWORKS</div><h3>C-Clamp Furniture Connector</h3><p>Designed a clamp that joins furniture parts into a secure, stable assembly.</p></div><div class="project-foot">CAD · Product Design</div></article>
+  </div>
+</div>
+</section>
+
+<section id="education" class="section">
+<div class="container reveal">
+  <div class="section-head"><div><div class="section-kicker">05 / Education</div><h2>Education & certifications</h2></div><p class="section-intro">Formal engineering education supported by focused cybersecurity training.</p></div>
+  <div class="grid">
+    <article class="card large"><div class="meta">2019 — 2023</div><h3>BSc in Mechanical Engineering</h3><p>Sonargaon University · CGPA 3.38 / 4.00</p></article>
+    <article class="card side"><div class="meta">CERTIFICATIONS</div><p>Advanced Mobile Application Security Testing — Byte Capsule (Sep 2026)</p><p style="margin-top:10px">Mobile Hacking Lab: Strings, IoT Connect, Cyclic Scanner (Jun 2026)</p><p style="margin-top:10px">Ethical Hacking — Eshikhon.com (2025)</p></article>
+    <article class="card"><div class="meta">NSDA · 2025</div><h3>Computer Operation Level 3</h3><p>ASSET Project, NSDA</p></article>
+    <article class="card"><div class="meta">BMET · 2025</div><h3>Graphics Design Level 3</h3><p>BMET, NSDA</p></article>
+    <article class="card"><div class="meta">2017</div><h3>Basic Computer</h3><p>BSCIC</p></article>
+  </div>
+</div>
+</section>
+
+<section id="contact" class="section">
+<div class="container reveal">
+  <div class="section-head"><div><div class="section-kicker">06 / Contact</div><h2>Let's talk security.</h2></div><p class="section-intro">For security work, collaboration, research or internship opportunities.</p></div>
+  <div class="contact">
+    <div class="contact-box"><div class="meta">GET IN TOUCH</div><h3>Have a security project or opportunity?</h3><p style="color:var(--muted);margin-top:10px">Send me a message and let's discuss the scope, goals and next steps.</p><div class="actions"><a class="btn primary" href="mailto:researcherreman@gmail.com">Email me →</a><a class="btn" href="Reman_Roy_Tripura_CV.pdf" download>CV ↓</a></div></div>
+    <div class="contact-box"><div class="meta">LINKS</div><div class="contact-links">
+      <a href="mailto:researcherreman@gmail.com">researcherreman@gmail.com</a>
+      <a href="tel:+8801855489796">+880 1855 489796</a>
+      <a href="https://www.linkedin.com/in/remanroy" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://github.com/remanroy" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://hackerone.com/remanroy" target="_blank" rel="noopener">HackerOne ↗</a>
+      <a href="https://bugcrowd.com/h/remanroy" target="_blank" rel="noopener">Bugcrowd ↗</a>
+    </div></div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer class="container"><span>© 2026 Reman Roy Tripura</span><span>Engineer · Security Researcher · Pentester</span></footer>
+
+<script>
+const roles=["Engineer","Security Researcher","Pentester"];
+let i=0,j=0,deleting=false;
+const el=document.getElementById("typed");
+function typeRole(){
+  const word=roles[i];
+  el.textContent=word.slice(0,j);
+  if(!deleting && j<word.length){j++;setTimeout(typeRole,85)}
+  else if(!deleting){deleting=true;setTimeout(typeRole,1200)}
+  else if(j>0){j--;setTimeout(typeRole,48)}
+  else{deleting=false;i=(i+1)%roles.length;setTimeout(typeRole,250)}
+}
+typeRole();
+
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>document.querySelector(".nav-links").classList.remove("open")));
+</script>
+</body>
+</html>
